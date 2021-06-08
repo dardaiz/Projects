@@ -4,7 +4,7 @@ Details on my cloud network
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
-Red Team Resource Group: https://github.com/dardaiz/Projects-/blob/9f5162ecc96ae8370269b9a98a725aa0238d6f7e/Diagrams/Azure%20Red%20Team%20Resource%20Group.png
+Red Team Resource Group will be located in. 
 
 Projects-/Diagrams/Azure Red Team Resource Group.png
 
@@ -15,7 +15,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   /ansible/ would contain all of the files to create these playbooks.
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -36,7 +36,6 @@ What does Filebeat watch for? Log files and log events
 What does Metricbeat record? Metricbeat collects metrics from the system and services running on the server.  
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name      | Function   | IP Address | Operating System |
 |-----------|------------|------------|------------------|
@@ -53,18 +52,17 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 71.223.130.92
 
-Machines within the network can only be accessed by SSH.
- Which machine did you allow to access your ELK VM? What was its IP address?_10.0.0.4
-
+Machines within the network can only be accessed by SSH. I have set up access for SSH in to Jump-box and HTTP set up through the containers.
+The only IP that has SSH access to the Elk server will be 10.0.0.4
+ 
 A summary of the access policies in place can be found in the table below.
 
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
-Red Team Resource Group: https://github.com/dardaiz/Projects-/blob/9f5162ecc96ae8370269b9a98a725aa0238d6f7e/Diagrams/Azure%20Red%20Team%20Resource%20Group.png
+Red Team Resource Group:
 
 Projects-/Diagrams/Azure Red Team Resource Group.png
-
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
@@ -93,7 +91,6 @@ What does Filebeat watch for? Log files and log events
 What does Metricbeat record? Metricbeat collects metrics from the system and services running on the server.  
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name      | Function   | IP Address | Operating System |
 |-----------|------------|------------|------------------|
@@ -109,9 +106,6 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 71.223.130.92
-
-Machines within the network can only be accessed by SSH.
- Which machine did you allow to access your ELK VM? What was its IP address?_10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -125,7 +119,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because.
 The automation functionality benefits the user from having to run tasks manually and allows them to work on more valueable tasks. 
 
 The playbook implements the following tasks:
@@ -160,7 +154,8 @@ SSH into the control node and follow the steps below:
 - Update the hosts Playbook file to include. Elk, 10.1.0.4 ansible_python_interpreter=/usr/bin/python3 
 - Run the playbook, and navigate to http://20.80.234.117:5601/app/kibana#/home to check that the installation worked as expected.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+In order to run the playbook and get updates you will need to run the following command
+ansible-playbook Elk.yml
 
 
 
