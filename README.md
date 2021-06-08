@@ -154,7 +154,7 @@ SSH into the control node and follow the steps below:
 - Update the hosts Playbook file to include. Elk, 10.1.0.4 ansible_python_interpreter=/usr/bin/python3 
 - Run the playbook, and navigate to http://20.80.234.117:5601/app/kibana#/home to check that the installation worked as expected.
 
-In order to run the playbook and get updates you will need to run the following command
+In order to run the playbook and get updates you will need to run the following command:
 ansible-playbook Elk.yml
 
 
