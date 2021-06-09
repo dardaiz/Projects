@@ -28,10 +28,10 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-The load balancers act as a barrier and allocates traffic evenly so that it does not overload one machine and it protects against denial-of-service attacks. What is the advantage to the jump box? The advantage to the Jump box is that it acts as an additional layer of protection to our network by blocking direct access to the public internet and we can allow our machines to access the internet from our private IP’s. This acts as a multi-factor authentication as well as acting as a gateway between two security zones.   
+The load balancers act as a barrier and allocates traffic evenly so that it does not overload one machine and protects against denial-of-service attacks. What is the advantage to the Jump Box? The advantage to the Jump Box is that it acts as an additional layer of protection to our network by blocking direct access to the public internet and we can allow our machines to access the internet from our private IP’s. This acts as a multi-factor authentication as well as acting as a gateway between the two security zones.   
 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the jump-box and system network.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump Box and system network.
 What does Filebeat watch for? Log files and log events
 What does Metricbeat record? Metricbeat collects metrics from the system and services running on the server.  
 
@@ -49,10 +49,10 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 71.223.130.92
 
-Machines within the network can only be accessed by SSH. I have set up access for SSH in to Jump-box and HTTP set up through the containers.
+Machines within the network can only be accessed by SSH. I have set up access for SSH in to Jump Box and HTTP set up through the containers.
 The only IP that has SSH access to the Elk server will be 10.0.0.4
  
 A summary of the access policies in place can be found in the table below.
@@ -65,7 +65,7 @@ Red Team Resource Group:
 Projects-/Diagrams/Azure Red Team Resource Group.png
 
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above; alternatively select portions of the Ansible file may be used to install only certain pieces of it, such as Filebeat.
 
   /ansible/ would contain all of the files to create these playbooks.
 
@@ -104,7 +104,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump-box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 71.223.130.92
 
 A summary of the access policies in place can be found in the table below.
