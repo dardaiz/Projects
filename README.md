@@ -30,6 +30,8 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 The load balancers act as a barrier and allocates traffic evenly so that it does not overload one machine and protects against denial-of-service attacks. What is the advantage to the Jump Box? The advantage to the Jump Box is that it acts as an additional layer of protection to our network by blocking direct access to the public internet and we can allow our machines to access the internet from our private IP’s. This acts as a multi-factor authentication as well as acting as a gateway between the two security zones.   
 
+Once I set up Kibana, I SSH’ed into Web-1. Once in Web-1 I ran a for loop (for I in {1..100}; do ssh azadmin@10.0.0.13) to have failed SSH login attempts listed and then ran a stress test ( sudo apt install stress)( sudo stress --cpu 1). I then went back in to Kibana and tested my site was receiving data from my machines and then pulled up my syslogs information and went into the SSH logs and verified there were failed attempts, and this can be verified in the picture I provided (path here). I then went in to metrics and pull the system metrics and pulled up the overview to show CPU usage has spiked in web-1 server since I was running the stress test. This can be verified in the picture I provided (path here). 
+
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump Box and system network.
 What does Filebeat watch for? This application monitors log files and log events.
