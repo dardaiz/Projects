@@ -32,7 +32,7 @@ The load balancers act as a barrier and allocates traffic evenly so that it does
 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump Box and system network.
-What does Filebeat watch for? Log files and log events
+What does Filebeat watch for? This application monitors log files and log events.
 What does Metricbeat record? Metricbeat collects metrics from the system and services running on the server.  
 
 The configuration details of each machine may be found below.
