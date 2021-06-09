@@ -1,4 +1,4 @@
-# Projects-
+# Projects
 Details on my cloud network
 
 ## Automated ELK Stack Deployment
@@ -6,7 +6,7 @@ Details on my cloud network
 The files in this repository were used to configure the network depicted below.
 Red Team Resource Group will be located in. 
 
-Projects-/Diagrams/Azure Red Team Resource Group.png
+Projects/Diagrams/Azure Red Team Resource Group.png
 
 
 
@@ -106,6 +106,6 @@ SSH into the control node and follow the steps below:
 In order to run the playbook and get updates you will need to run the following command:
 ansible-playbook Elk.yml
 
-Once I set up Kibana, I SSH’ed into Web-1. Once in Web-1 I ran a for loop (for I in {1..100}; do ssh azadmin@10.0.0.13) to have failed SSH login attempts listed and then ran a stress test ( sudo apt install stress)( sudo stress --cpu 1). I then went back in to Kibana and tested my site was receiving data from my machines and then pulled up my syslogs information and went into the SSH logs and verified there were failed attempts, and this can be verified in the image I provided (Projects-/Images Kibana Failed SSH.png). I then went in to metrics and pull the system metrics and pulled up the overview to show CPU usage has spiked in web-1 server since I was running the stress test. This can be verified in the image I provided (Projects-/Images Kibana Stress Test.png). 
+Once I set up Kibana, I SSH’ed into Web-1. Once in Web-1 I ran a for loop (for I in {1..100}; do ssh azadmin@10.0.0.13) to have failed SSH login attempts listed and then ran a stress test ( sudo apt install stress)( sudo stress --cpu 1). I then went back in to Kibana and tested my site was receiving data from my machines and then pulled up my syslogs information and went into the SSH logs and verified there were failed attempts, and this can be verified in the image I provided (Projects/Images Kibana Failed SSH.png). I then went in to metrics and pull the system metrics and pulled up the overview to show CPU usage has spiked in web-1 server since I was running the stress test. This can be verified in the image I provided (Projects/Images Kibana Stress Test.png). 
 
 
